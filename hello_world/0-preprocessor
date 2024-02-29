@@ -1,2 +1,2 @@
 #!/bin/bash
-$CFILE=HolaMundo.c
+gcc $CFILE -E -o c
