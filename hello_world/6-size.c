@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdbool.h>
 /**
  *main - Punto de Entrada
  *
@@ -11,13 +10,13 @@ int main(void)
 int a;
 long int b;
 double c;
-bool d;
+int d;
 float e;
 
-printf("Espacio Memoria de Int: %lu byte(s)\n", (unsigned long)sizeof(a));
+printf("Espacio Memoria de int: %lu byte(s)\n", (unsigned long)sizeof(a));
 printf("Espacio Memoria long int: %lu byte(s)\n", (unsigned long)sizeof(b));
 printf("Espacio Memoria de double: %lu byte(s)\n", (unsigned long)sizeof(c));
-printf("Epacio Memoria de bool: %lu byte(s)\n", (unsigned long)sizeof(d));
+printf("Epacio Memoria de int: %lu byte(s)\n", (unsigned long)sizeof(d));
 printf("Espacio Memoria de float: %lu byte(s)\n", (unsigned long)sizeof(e));
 return (0);
 
