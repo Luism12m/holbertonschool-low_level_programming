@@ -2,7 +2,7 @@
 
 /**
 * _isdigit - revisar digito de 0 a 9
-* @c: Value being evaluated
+* @c: evaluar
 *
 * Return: 1 si es digito, de lo contrario 0
 */
