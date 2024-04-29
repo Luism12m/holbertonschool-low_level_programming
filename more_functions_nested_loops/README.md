@@ -1,0 +1,1 @@
+0. Verificar caracteres en mayuscula
