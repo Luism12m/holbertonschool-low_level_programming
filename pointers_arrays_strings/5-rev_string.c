@@ -1,4 +1,4 @@
-#include "main.h"
+include "main.h"
 
 /**
  * _strlen - Returns the length of a string
@@ -29,3 +29,4 @@ void rev_string(char *s)
 		s[i] = s[len - i];
 		s[len - i] = tmp;
 	}
+}
