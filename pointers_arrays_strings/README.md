@@ -1,3 +1,3 @@
-ejercicios de punteros .0
+mas punteros
 
-0-reset_to_98.c
+0-strcat.c : unir dos cadenas
