@@ -1,0 +1,23 @@
+/*
+Funciones basicas en c
+*/
+#include <stdio.h> //directiva include
+
+
+int suma()
+
+{
+  int num=12;
+  int num2=4;
+  int suma=num+num2;
+
+  return suma;
+}
+
+
+int suma(); //declaramos la variable donde se aloja el resultado
+int main() //funcion main inicia la ejecucion del programa
+{
+  printf ("%i\n ",suma());
+  return ; // indica que el programa se termino con exito
+} //fin de la funcion main
