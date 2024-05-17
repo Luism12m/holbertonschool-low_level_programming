@@ -25,8 +25,8 @@ return (0);
 */
 int main(void)
 {
-char *s = "hello, world";
-char *f = "world";
+char *s = "hello, zipas";
+char *f = "zipas";
 char *t;
 
 t = _strstr(s, f);
