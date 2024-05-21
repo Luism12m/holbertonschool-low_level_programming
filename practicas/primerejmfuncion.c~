@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+
+/* PRIMER EJEMPLO DE FUNCIONES*/
+void holamundo();
+
+int main()
+
+{
+  holamundo();
+  holamundo();
+  holamundo();
+  holamundo();
+
+  
+  return 0;
+}
+
+void holamundo()
+{
+  printf ("Hola queridos programadores \n");
+}

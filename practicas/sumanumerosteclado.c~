@@ -1,0 +1,20 @@
+#include <stdio.h>
+/*segundo ejemplo funciones sin parametros*/
+
+int main()
+{
+  sumardosnumerossinparametros();  /*llamamos la funcion en este caso: "sumardosnumerossinparametros()"*/
+}
+void sumardosnumerossinparametros()
+{
+  int num1,num2,suma=0;
+
+  printf("Ingrese el numero uno \n");  /*prodedimiento de la funcion*/
+  scanf("%d",& num1);
+  printf("Ingrese el numero dos \n");
+  scanf("%d",& num2);
+  suma=num1+num2;
+
+  printf("la suma de los dos numeros es : %d\n", suma);
+  printf("la suma de los dos numeros es : %d\n", num1+num2);
+}
