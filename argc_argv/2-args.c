@@ -8,9 +8,8 @@
 
 int main(int argc, char *argv[])
 {
+int = i;
 for (int i = 0; i < argc; i++)
-{
 printf(" argumento %d, %s \n ", i, argv[i]);
-}
 return  (0);
 }
