@@ -2,7 +2,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
-* print_strings - prints strings, followed by a new line
+* print_strings - Prints strings, followed by a new line
 * @separator: String to be printed between strings
 * @n: number of variadic arguments
 * @...: Arguments Variadic
