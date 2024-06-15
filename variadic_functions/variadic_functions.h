@@ -2,15 +2,15 @@
 #define STRUCT_H
 #include <stdarg.h>
 /**
- * struct Ftype - Struct op
- *
- * @tc: Parameter
- * @tf: The function associated
- */
+* struct Ftype - Struct op
+*
+* @tc: Parameter
+* @tf: The function associated
+*/
 typedef struct Ftype
 {
-  char *tc;
-  void (*tf)(va_list);
+char *tc;
+void (*tf)(va_list);
 } ftype;
 #endif
 
