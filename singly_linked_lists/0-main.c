@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "lists.h"
 
-int main()
+int main(void)
 {
   /* Creamos algunos nodos para una lista de ejemplo*/
 list_t node1 = {"Hello", 5, NULL};
