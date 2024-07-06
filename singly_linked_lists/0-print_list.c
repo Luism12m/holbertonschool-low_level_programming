@@ -35,6 +35,5 @@ printf("[%u] %s\n", current->len, current->str);
 current = current->next;
 count++;
 }
-printf("-> %lu elements\n\n", count);
 return count;
 }
