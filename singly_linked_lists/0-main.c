@@ -1,24 +1,40 @@
+#include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
 #include "lists.h"
 
+/**
+* main - check the code
+*
+* Return: Always 0.
+*/
 int main(void)
 {
-  /* Creamos algunos nodos para una lista de ejemplo*/
-list_t node1 = {"Hello", 5, NULL};
-list_t node2 = {"World", 5, NULL};
-list_t node3 = {"from", 4, NULL};
-list_t node4 = {"Linked", 6, NULL};
-list_t node5 = {"List", 4, NULL};
+list_t *head;
+list_t *new;
+list_t hello = {"World", 5, NULL};
+size_t n;
 
-/* Construimos la lista enlazada manualmente*/
-node1.next = &node2;
-node2.next = &node3;
-node3.next = &node4;
-node4.next = &node5;
+head = &hello;
+new = malloc(sizeof(list_t));
+if (new == NULL)
+{
+printf("Error\n");
+return (1);
+}
+new->str = strdup("Hello");
+new->len = 5;
+new->next = head;
+head = new;
+n = print_list(head);
+printf("-> %lu elements\n", n);
 
-/*Imprimimos la lista*/
-printf("Contenido de la lista:\n");
-print_list(&node1);
+printf("\n");
+free(new->str);
+new->str = NULL;
+n = print_list(head);
+printf("-> %lu elements\n", n);
 
-return 0;
+free(new);
+return (0);
 }
