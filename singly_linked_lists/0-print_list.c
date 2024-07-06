@@ -24,10 +24,17 @@ size_t count = 0;
 
 while (current != NULL)
 {
+if (current->str == NULL)
+{
+printf("[0] (nil)\n");
+}
+else
+{
 printf("[%u] %s\n", current->len, current->str);
+}
 current = current->next;
 count++;
 }
-
+printf("-> %lu elements\n\n", count);
 return count;
 }
