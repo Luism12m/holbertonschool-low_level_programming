@@ -24,7 +24,7 @@ size_t count = 0;
 
 while (current != NULL)
 {
-printf("str: %s, len: %u\n", current->str, current->len);
+printf("[%u] %s\n", current->len, current->str);
 current = current->next;
 count++;
 }
