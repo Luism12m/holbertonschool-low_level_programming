@@ -2,7 +2,12 @@
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
-
+/**
+* free_list - Frees a list_t list.
+* @head: A pointer to the head of the list.
+*
+* Description: Frees all nodes of a list_t linked list.
+*/
 void free_list(list_t *head)
 {
 list_t *current = head;
@@ -16,7 +21,14 @@ free(current);      /* Liberamos la memoria del nodo actual*/
 current = next;
 }
 }
-
+/**
+* print_list - Prints all elements of a list_t list.
+* @h: A pointer to the head of the list.
+*
+* Return: The number of nodes in the list.
+*
+* Description: Prints each node's len and str of a list_t list.
+*/
 size_t print_list(const list_t *h)
 {
 const list_t *current = h;
