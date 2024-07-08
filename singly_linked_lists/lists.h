@@ -32,4 +32,15 @@ void free_list(list_t *head);
 * Description: Prints each node's len and str of a list_t list.
 */
 size_t print_list(const list_t *h);
+/**
+* list_len - Counts the number of elements in a linked list.
+* @h: A pointer to the head of the list.
+*
+* Return: The number of elements in the linked list.
+*
+* Description: Write a function that returns the number of elements in a linked list_t list. 
+*              
+*          
+*/
+size_t list_len(const list_t *h);
 #endif
