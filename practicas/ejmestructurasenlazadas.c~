@@ -1,0 +1,17 @@
+/*Ejemplo basico de una estructura en c*/
+#include<stdio.h>
+/*declaramos la estructura(permite almacenar distintos tipos de datos) de la siguiente manera con el nombre leon:*/
+struct leon
+/*puede contener tipos de datos diferentes*/
+{
+  char nombre [30];
+  int edadmeses;
+  float peso;
+}/*terminando la llave se pueden definir las variables para esta estructura*/
+  leon1={"Zeus",55,250.66} ;
+
+int main (){
+  printf("El peso de: %s es: %.2f kgrs y tiene %i meses\n",leon1.nombre,leon1.peso,leon1.edadmeses);
+
+  return 0;
+}
