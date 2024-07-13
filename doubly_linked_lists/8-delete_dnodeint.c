@@ -48,5 +48,5 @@ h1 = h1->next;
 i++;
 }
 
-  return (-1);
+return (-1);
 }
