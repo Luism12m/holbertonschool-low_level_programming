@@ -1,5 +1,10 @@
-#ifndef LIST_H
-#define LIST_H
+#ifndef _LISTS_
+#define _LISTS_
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 /**
 * struct list_s - singly linked list
 * @str: string - (malloc'ed string)
@@ -7,40 +12,19 @@
 * @next: points to the next node
 *
 * Description: singly linked list node structure
+* 
 */
 typedef struct list_s
 {
 char *str;
 unsigned int len;
-/* Description: structlists node structure*/
 struct list_s *next;
 } list_t;
-#define NIL "nil"
-/**
-* free_list - Frees a list_t list.
-* @head: A pointer to the head of the list.
-*
-* Description: Frees all nodes of a list_t linked list.
-*/
-void free_list(list_t *head);
-/**
-* print_list - Prints all elements of a list_t list.
-* @h: A pointer to the head of the list.
-*
-* Return: The number of nodes in the list.
-*
-* Description: Prints each node's len and str of a list_t list.
-*/
+
 size_t print_list(const list_t *h);
-/**
-* list_len - Counts the number of elements in a linked list.
-* @h: A pointer to the head of the list.
-*
-* Return: The number of elements in the linked list.
-*
-* Description: Write a function that returns the number of elements in a linked list_t list. 
-*              
-*          
-*/
 size_t list_len(const list_t *h);
+list_t *add_node(list_t **head, const char *str);
+list_t *add_node_end(list_t **head, const char *str);
+void free_list(list_t *head);
+
 #endif
