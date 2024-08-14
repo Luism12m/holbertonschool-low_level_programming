@@ -1,27 +1,11 @@
-/*
-* File: 0-putchar.c
-* Auth: Luis Zipa
-*
-*/
-
 #include "main.h"
 
-/**
-* main - Prints "Holberton" followed by a new line.
-*
-* Return: Always 0.
-*/
-int main(void)
-{
-_putchar('_');
-_putchar('p');
-_putchar('u');
-_putchar('t');
-_putchar('c');
-_putchar('h');
-_putchar('a');
-_putchar('r');
-_putchar('\n');
+int main (void){
+  char * text = "_putchar\n";
+  int i = 0;
+  for (i = 0; text[i]; i++){
+    _putchar(text[i]);
 
-return (0);
+  }
+  return (0);
 }
