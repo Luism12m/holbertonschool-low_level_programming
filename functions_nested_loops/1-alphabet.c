@@ -1,18 +1,19 @@
 #include "main.h"
 /**
  * main - print alphabet lowercase
- * @alphabet
- * @i
+ * 
+ * 
  *
  * Return: always 0.
  */
-int main (void)
+void print_alphabet(void)
 {
-  char *alphabet = "abcdefghijklmnopqrstuvwxyz\n";
+  
   int i = 0;
-  for (i = 0; alphabet[i]; i++)
+  
+  for (i = 0; i < 26; i++)
     {
-      _putchar(alphabet[i]);
+      _putchar(97 + i);
     }
-	 return (0);
+  _putchar('\n');
 }
