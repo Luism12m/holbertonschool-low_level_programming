@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * print_alphabet(void) - entry point
+ * void print_alphabet(void) - entry point
  *
  * Description: This function prints the alphabet, in lowercase
  *
  * Return: void
 */
-print_alphabet(void)
+void print_alphabet(void)
 {
 int i = 0;
 for (i = 0; i < 26; i++)
