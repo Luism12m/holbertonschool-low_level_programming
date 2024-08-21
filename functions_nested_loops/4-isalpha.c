@@ -1,0 +1,17 @@
+#include "main.h"
+/**
+ * _isalpha - Check if a character is a alphabet letter.
+ * @c: The character to be checked.
+ * Description: This function prints checks for alphabet character
+ *
+ * Return: 1  if c is a letter, lowercase or uppercase  , Return: 0 otherwise
+*/
+
+int _isalpha(int c)
+{
+if (c >= 65 && c <= 122)
+{
+return (1);
+}
+return (0);
+}
