@@ -1,0 +1,18 @@
+#include "main.h"
+/**
+ * _abs - function to found an absolute number.
+ * @ a: The number to be checked.
+ * Description: This function prints the absolute number of a number
+ *
+ * Return: the number to be checked "a"
+*/
+
+int _abs(int a)
+{
+int x = a;
+if (x < 0)
+{
+x = -1 * x;
+}
+return (x);
+}
