@@ -1,21 +1,20 @@
 #include <stdio.h>
 
 /**
-main - entry point of the program
+* main - Entry point of the program
 *
-return: always 0 (success)
+* Return: Always 0 (Success)
 */
-int main()
+int main(void)
 {
-  int numero = -4;
-  if(numero > 0)
-    {
-      printf("El numero es positivo.\n");
-    }
-  else
-
-    {
-      printf("El numero es negativo o cero.\n");
-    }
-  return(0);
+int numero = 10;
+if (numero > 0)
+{
+printf("El numero es positivo.\n");
+}
+else
+{
+printf("El numero es negativo o cero.\n");
+}
+return (0);
 }
