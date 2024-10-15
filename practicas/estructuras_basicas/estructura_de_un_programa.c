@@ -4,7 +4,8 @@
  *
  * Return: Always 0 (Success)
  */
-int main(){
-  printf("Hola mundo cruel");
-  return 0;
+int main(void)
+{
+printf("Hola mundo cruel");
+return (0);
 }
