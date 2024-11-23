@@ -1,50 +1,44 @@
-#include "main.h"
+#include <fcntl.h>
+#include <unistd.h>
+#include <string.h>
+#include <stdio.h>
 
 /**
- * read_textfile - Lee un archivo y lo imprime en la salida estandar.
- * @filename: Nombre del archivo a leer.
- * @letters: Numero de letras a leer e imprimir.
+ * create_file - creates a file with specified content.
+ * @filename: the name of the file to be created.
+ * @text_content: the content to write to the file.
  *
- * Return: El nuero de letras realmente leidas e ipresas,o 0 si falla.
+ * Return: 1 on success, -1 on failure.
  */
-ssize_t read_textfile(const char *filename, size_t letters)
+int create_file(const char *filename, char *text_content)
 {
-  int fd; 
-  char *buffer;  
-  ssize_t bytes_read, bytes_written;
-  if (filename == NULL)
-    return (0);
+int fd;
+ssize_t bytes_written;
+if (filename == NULL)
+return (-1);
 
-  fd = open(filename, O_RDONLY);
-  if (fd == -1) {
-    perror("Error opening file");
-    return (0);
-  }
-  
-  buffer = malloc(sizeof(char) * letters);
-  if (buffer == NULL) {
-    perror("Memory allocation failed");
-    close(fd);
-    return (0);
-  }
+fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+if (fd == -1)
+{
+perror("Error opening/creating file");
+return (-1);
+}
 
-  bytes_read = read(fd, buffer, letters);
-  if (bytes_read == -1) {
-    perror("Error reading file");
-    free(buffer);
-    close(fd);
-    return (0);
-  }
+if (text_content != NULL)
+{
+bytes_written = write(fd, text_content, strlen(text_content));
+if (bytes_written == -1)
+{
+perror("Error writing to file");
+close(fd);
+return (-1);
+}
+}
 
-  bytes_written = write(STDOUT_FILENO, buffer, bytes_read);
-  if (bytes_written == -1 || bytes_written != bytes_read) {
-    perror("Error writing to stdout");
-    free(buffer);
-    close(fd);
-    return (0);
-  }
-  free(buffer);
-  close(fd);
-
-  return (bytes_read);
+if (close(fd) == -1)
+{
+perror("Error closing file");
+return (-1);
+}
+return (1);
 }
