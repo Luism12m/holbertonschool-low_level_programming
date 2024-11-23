@@ -1,0 +1,14 @@
+#ifndef _MAIN_H_
+#define _MAIN_H_
+
+/* Librerias necesarias*/
+
+#include <fcntl.h>    // Para open() y las constantes como O_RDONLY
+#include <stdio.h>    // Para perror() y otras funciones de I/O
+#include <stdlib.h>   // Para malloc() y free()
+#include <unistd.h>   // Para read(), write() y close()
+
+/* Prototipo de la funcion */
+ssize_t read_textfile(const char *filename, size_t letters);
+
+#endif /* _MAIN_H_ */
